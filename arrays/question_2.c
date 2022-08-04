@@ -3,7 +3,7 @@
  */
 
 #include<stdio.h>
-#include "arrays.h"
+#include "../headers/arrays.h"
 
 int main()
 {

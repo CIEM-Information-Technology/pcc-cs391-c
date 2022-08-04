@@ -4,7 +4,7 @@
  */
 
 #include<stdio.h>
-#include "arrays.h"
+#include "../headers/arrays.h"
 
 int main()
 {
@@ -22,10 +22,7 @@ int main()
     sortArray(a, n);
 
     printf("After sort\n");
-    for(i = 0; i < n; i++)
-    {
-        printf("%d\n", a[i]);
-    }
+    printArray(a, n);
 
     insertElement(a, &n);
     deleteElement(a, &n);
