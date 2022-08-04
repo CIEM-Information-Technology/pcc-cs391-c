@@ -7,10 +7,10 @@
 
 int main()
 {
-    int n, a[20];
-    
+    int n;
     printf("Enter the no. of elements\n");
     scanf("%d",&n);
+    int a[n];
     
     printf("Enter the elements\n");
     arrayInput(a, n);
