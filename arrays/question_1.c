@@ -1,8 +1,14 @@
-/*
- * C program to sort an array, insert an element into array, and
+/**
+ * @file question_1.c
+ * @author Aurghyadip Kundu (contact@aurghyadip.live)
+ * @brief C program to sort an array, insert an element into array, and
  * delete an element from an array using index.
+ * @version 0.1
+ * @date 2022-08-05
+ * 
+ * @copyright Copyright (c) 2022
+ * 
  */
-
 #include<stdio.h>
 #include "../headers/arrays.h"
 

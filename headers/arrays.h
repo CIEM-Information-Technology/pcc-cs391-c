@@ -1,10 +1,19 @@
-#include<stdio.h>
-/*
- * Function: arrayInput
- * take input in an array of size n
+/**
+ * @file arrays.h
+ * @author Aurghyadip Kundu (contact@aurghyadip.live)
+ * @brief Header file for common array operations
+ * @version 0.1
+ * @date 2022-08-04
  * 
- * a[]: array to be operated on
- * n: size of the array
+ * @copyright Copyright (c) 2022
+ * 
+ */
+
+/**
+ * @brief function to take input in an array
+ * 
+ * @param a array to take input to
+ * @param n number of elements in the array
  */
 void arrayInput(int a[], int n)
 {
@@ -15,12 +24,11 @@ void arrayInput(int a[], int n)
     }
 }
 
-/*
- * Function: printArray
- * prints an array of size n
+/**
+ * @brief prints an array of size n
  * 
- * a[]: array to be printed
- * n: size of the array
+ * @param a array to be printed
+ * @param n size of the array
  */
 void printArray(int a[], int n)
 {
@@ -32,11 +40,11 @@ void printArray(int a[], int n)
     printf("\n");
 }
 
-/*
- * Function: sortArray
- * function to bubble sort an array of size n.
- * a[]: array to be sorted
- * n: number of elements inside the array.
+/**
+ * @brief function to bubble sort an array of size n.
+ * 
+ * @param a array to be sorted
+ * @param n size of the array
  */
 void sortArray(int a[], int n)
 {
@@ -56,15 +64,13 @@ void sortArray(int a[], int n)
     }
 }
 
-/*
- * Function: linearSearch
- * function to search an element inside an array using linear search
+/**
+ * @brief function to search an element inside an array using linear search
  * 
- * a[]: array to be searched
- * n: number of elements inside the array
- * e: element to be searched
- * 
- * returns: int (index of the element)
+ * @param a array to be searched
+ * @param n number of elements in the array
+ * @param item elemenet to be searched
+ * @return int Index of the element or -1 if not found
  */
 int linearSearch(int a[], int n, int item)
 {
@@ -89,11 +95,11 @@ int linearSearch(int a[], int n, int item)
     }
 }
 
-/*
- * Function: insertElement
- * inserts an element into the array provided
- * a[]: array to be opearted on
- * *n: reference to the size of the array
+/**
+ * @brief inserts an element into the array provided
+ * 
+ * @param a array to insert the element into
+ * @param n reference to the size of the array.
  */
 void insertElement(int a[], int *n)
 {
@@ -118,11 +124,11 @@ void insertElement(int a[], int *n)
     printf("\n");
 }
 
-/*
- * Function: deleteElement
- * deletes an element from an array based on index
- * a[]: array to be opearted on
- * *n: reference to the size of n
+/**
+ * @brief deletes an element from an array based on index
+ * 
+ * @param a array to delete the element from
+ * @param n reference to the size of the array
  */
 void deleteElement(int a[], int *n)
 {

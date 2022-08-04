@@ -1,7 +1,13 @@
-/*
- * C program to reverse and search the elements of an array. 
+/**
+ * @file question_2.c
+ * @author Aurghyadip Kundu (contact@aurghyadip.live)
+ * @brief C program to reverse and search the elements of an array. 
+ * @version 0.1
+ * @date 2022-08-05
+ * 
+ * @copyright Copyright (c) 2022
+ * 
  */
-
 #include<stdio.h>
 #include "../headers/arrays.h"
 

@@ -1,3 +1,14 @@
+/**
+ * @file question_2.c
+ * @author Aurghyadip Kundu
+ * @brief C Program to implement selection sort.
+ * @version 0.1
+ * @date 2022-08-04
+ * 
+ * @copyright Copyright (c) 2022
+ * 
+ */
+
 #include<stdio.h>
 #include "../headers/arrays.h"
 #include "../headers/sorting.h"

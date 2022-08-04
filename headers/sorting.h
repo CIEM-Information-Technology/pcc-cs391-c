@@ -1,9 +1,20 @@
-/*
- * Function: insertionSort(int a[], int n)
- * function to sort an array with insertion sort algorithm
+/**
+ * @file sorting.h
+ * @author Aurghyadip Kundu
+ * @brief Header file for sorting opeartions, insertion sort, selection sort
+ * merge sort and quick sort.
+ * @version 0.1
+ * @date 2022-08-04
  * 
- * a[]: array to be sorted
- * n: number of elements in the array
+ * @copyright Copyright (c) 2022
+ * 
+ */
+
+/**
+ * @brief function to implement insertion sort
+ * 
+ * @param a array to be sorted 
+ * @param n number of elements in the array
  */
 void insertionSort(int a[],int n)
 {
@@ -23,16 +34,14 @@ void insertionSort(int a[],int n)
 
 }
 
-/*
- * Function: smallestElement(inta[], int k, int[n])
- * function to find the smallest element's position in an array
+/**
+ * @brief function to find the smallest element's position in an array
  * according to selection sort
  * 
- * a[]: array to find the position of the smallest element of
- * k: position to start at
- * n: number of elements in the array
- * 
- * returns: int (position of the smallest element)
+ * @param a array to be searched
+ * @param k position to start searching from
+ * @param n size of the array
+ * @return int the position of the smallest element after a[k]
  */
 int selectSmallestElementPos(int a[], int k, int n)
 {
@@ -49,12 +58,11 @@ int selectSmallestElementPos(int a[], int k, int n)
     return pos;
 }
 
-/*
- * Function: selectionSort(int a[], int n)
- * function to sort an array using the selection sort algorithm.
+/**
+ * @brief Function to implement selection sort
  * 
- * a[]: array to be sorted
- * n: number of elements in the array
+ * @param a array to sort
+ * @param n number of elements
  */
 void selectionSort(int a[],int n)
 {
