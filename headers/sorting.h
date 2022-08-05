@@ -11,6 +11,19 @@
  */
 
 /**
+ * @brief function to swap two values
+ * 
+ * @param a first value
+ * @param b second value
+ */
+void swap(int* a, int* b)
+{
+    int temp = *a;
+    *a = *b;
+    *b = temp;
+}
+
+/**
  * @brief function to implement insertion sort
  * 
  * @param a array to be sorted 
@@ -151,5 +164,55 @@ void mergeSort(int arr[], int l, int r)
         mergeSort(arr, m + 1, r);
  
         merge(arr, l, m, r);
+    }
+}
+
+/**
+ * @brief Function to heapify a subtree rooted with node i
+ * 
+ * @param a array to be heapified
+ * @param n size of the heap
+ * @param i index of a
+ */
+void heapify(int a[], int n, int i)
+{
+    int largest = i;
+    int left = 2 * i + 1;
+    int right = 2 * i + 2;
+
+    if(left < n && a[left] > a[largest])
+    {
+        largest = left;
+    }
+    if(right < n && a[right] > a[largest])
+    {
+        largest = right;
+    }
+    if(largest != i)
+    {
+        swap(&a[i], &a[largest]);
+        heapify(a, n, largest);
+    }
+}
+
+/**
+ * @brief function for implementing heapsort
+ * 
+ * @param a array to be sorted
+ * @param n size of the array
+ */
+void heapSort(int a[], int n)
+{
+    /* building max heap */
+    for (int i = n / 2 - 1; i >= 0; i--)
+    {
+        heapify(a, n, i);
+    }
+
+    /* heap sort */ 
+    for (int i = n - 1; i >= 0; i--)
+    {
+        swap(&a[0], &a[i]);
+        heapify(a, i, 0); /* get highest element at the root again */
     }
 }

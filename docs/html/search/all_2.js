@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['insertelement_0',['insertElement',['../arrays_8h.html#a5371b17a084f08fba892db019bcf3579',1,'arrays.h']]],
-  ['insertionsort_1',['insertionSort',['../sorting_8h.html#a984a82572b786dc675486f5d527115df',1,'sorting.h']]]
+  ['heapify_0',['heapify',['../sorting_8h.html#a05b3d493e28d5148ceeb5329744f1344',1,'sorting.h']]],
+  ['heapsort_1',['heapSort',['../sorting_8h.html#ac92d43449213796ec52cd91ab9cd1287',1,'sorting.h']]]
 ];

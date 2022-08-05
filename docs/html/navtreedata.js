@@ -25,9 +25,12 @@
 var NAVTREE =
 [
   [ "Data Structures in C", "index.html", [
-    [ "Data Structures and Algorithms (PCC-CS391) Using C", "md___users_aurghyadip_ciem_dsa_c__r_e_a_d_m_e.html", [
-      [ "Linear Data Structure", "md___users_aurghyadip_ciem_dsa_c__r_e_a_d_m_e.html#autotoc_md1", null ],
-      [ "Non Linear Data Structure", "md___users_aurghyadip_ciem_dsa_c__r_e_a_d_m_e.html#autotoc_md2", null ]
+    [ "Data Structures and Algorithms (PCC-CS391) Using C", "md__r_e_a_d_m_e.html", [
+      [ "Syllabus", "md__r_e_a_d_m_e.html#autotoc_md1", [
+        [ "Linear Data Structure", "md__r_e_a_d_m_e.html#autotoc_md2", null ],
+        [ "Non Linear Data Structure", "md__r_e_a_d_m_e.html#autotoc_md3", null ]
+      ] ],
+      [ "How to Use this Repository", "md__r_e_a_d_m_e.html#autotoc_md4", null ]
     ] ],
     [ "Files", "files.html", [
       [ "File List", "files.html", "files_dup" ],
