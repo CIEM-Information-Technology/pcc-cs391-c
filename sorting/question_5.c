@@ -14,19 +14,17 @@
 
 int main()
 {
-    int n, f, l, pos;
+    int n;
     printf("Enter no. of elements\n");
     scanf("%d", &n);
+
     int a[n];
-    l = n - 1;
     printf("Enter the elements\n");
     arrayInput(a, n);
 
-    quick(a, f, l);
+    quickSort(a, 0, n - 1);
     printf("After sorting\n");
-    for (int i = 0; i < n; i++)
-    {
-        printf("%d ", a[i]);
-    }
+    printArray(a, n);
+
     return 0;
 }

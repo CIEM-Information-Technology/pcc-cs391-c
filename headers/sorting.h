@@ -223,73 +223,53 @@ void heapSort(int a[], int n)
 }
 
 /**
- * @brief function to implement quicksort
+ * @brief This function takes last element as pivot, places
+ * the pivot element at its correct position in sorted
+ * array, and places all smaller (smaller than pivot)
+ * to left of pivot and all greater elements to right
+ * of pivot
  *
- * @param a array to be sorted
- * @param f
- * @param l
- * @return int
+ * @param arr array to be partitioned
+ * @param low starting index
+ * @param high ending index
+ * @return int (pivot)
  */
-int quick(int a[50], int f, int l)
+int partition(int arr[], int low, int high)
 {
-    int pos = f;
-    if (f >= l)
+    int pivot = arr[high]; // pivot
+    int i = (low - 1);     // Index of smaller element and indicates the right position of pivot found so far
+
+    for (int j = low; j <= high - 1; j++)
     {
-        return 0;
+        // If current element is smaller than the pivot
+        if (arr[j] < pivot)
+        {
+            i++; // increment index of smaller element
+            swap(&arr[i], &arr[j]);
+        }
     }
-    part(a, f, l, pos);
-    quick(a, f, pos - 1);
-    quick(a, pos + 1, l);
-    return 0;
+    swap(&arr[i + 1], &arr[high]);
+    return (i + 1);
 }
 
 /**
- * @brief function to partition the array
+ * @brief function to implement quicksort
  *
- * @param a array to be partitioned
- * @param f
- * @param l
- * @param pos
- * @return int
+ * @param arr array to be sorted
+ * @param low Starting index
+ * @param high Ending index
  */
-int part(int a[50], int f, int l, int pos)
+void quickSort(int arr[], int low, int high)
 {
-
-    int i = f, j = l;
-    int temp = 0;
-    while (1)
+    if (low < high)
     {
-        while (a[pos] <= a[j] && pos != j)
-        {
-            j--;
-        }
-        if (pos == j)
-        {
-            return 0;
-        }
-        if (a[pos] > a[j])
-        {
+        /* pi is partitioning index, arr[p] is now
+        at right place */
+        int pi = partition(arr, low, high);
 
-            temp = a[j];
-            a[j] = a[pos];
-            a[pos] = temp;
-            pos = j;
-        }
-        while (a[pos] >= a[i] && pos != i)
-        {
-            i++;
-        }
-        if (pos == i)
-        {
-            return 0;
-        }
-        if (a[pos] < a[i])
-        {
-            temp = a[i];
-            a[i] = a[pos];
-            a[pos] = temp;
-            pos = i;
-        }
+        // Separately sort elements before
+        // partition and after partition
+        quickSort(arr, low, pi - 1);
+        quickSort(arr, pi + 1, high);
     }
-    return 0;
 }
