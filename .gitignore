@@ -37,6 +37,7 @@
 *.hex
 
 # Debug files
+cmake-build-debug/
 *.dSYM/
 *.su
 *.idb
@@ -52,3 +53,5 @@ Mkfile.old
 dkms.conf
 
 .vscode/
+.idea/
+.DS_STORE
