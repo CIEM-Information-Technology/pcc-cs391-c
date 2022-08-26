@@ -1,4 +1,6 @@
 #include <stdio.h>
+#include "../headers/arrays.h"
+#include "../headers/sorting.h"
 
 /**
  * @brief Function to implement binary search algorithm
@@ -26,19 +28,21 @@ int binarySearch(int arr[], int max, int element)
 
 int main()
 {
-    int element, limit, position;
-    printf("Enter the Limit of Elements in Array: ");
+    int element, limit;
+    printf("Enter the number of elements in array: ");
     scanf("%d", &limit);
     int arr[limit];
     
     printf("Enter %d Elements in Array: \n", limit);
-    for (int count = 0; count < limit; count++)
-    {
-        scanf("%d", &arr[count]);
-    }
+    arrayInput(arr, limit);
+    sortArray(arr, limit);
+    printf("Sorted array: ");
+    printArray(arr, limit);
+
     printf("Enter Element To Search: ");
     scanf("%d", &element);
-    position = binarySearch(arr, limit, element);
+
+    int position = binarySearch(arr, limit, element);
     if (position == -1)
     {
         printf("Element %d Not Found\n", element);
@@ -47,5 +51,6 @@ int main()
     {
         printf("Element %d Found at Position %d\n", element, position + 1);
     }
+
     return 0;
 }

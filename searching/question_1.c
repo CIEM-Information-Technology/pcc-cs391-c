@@ -1,4 +1,6 @@
 #include <stdio.h>
+#include "../headers/arrays.h"
+
 /**
  * @brief implementation function of linear search algorithm
  * 
@@ -32,10 +34,8 @@ int main()
     scanf("%d", &n);
     int a[n];
     printf("Enter the elements\n");
-    for (int i = 0; i < n; i++)
-    {
-        scanf("%d", &a[i]);
-    }
+    arrayInput(a, n);
+    
     printf("Enter the element to be searched\n");
     scanf("%d", &item);
     linear_search(a, n, item);
