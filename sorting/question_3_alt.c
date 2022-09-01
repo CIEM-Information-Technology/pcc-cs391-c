@@ -21,6 +21,12 @@ int main()
     return 0;
 }
 
+/**
+ * @brief Merge sort function
+ * 
+ * @param arr pointer to the array to be sorted
+ * @param size size of the array
+ */
 void mergeSort(int *arr, int size)
 {
     int mid = 0;
@@ -33,6 +39,14 @@ void mergeSort(int *arr, int size)
     }
 }
 
+/**
+ * @brief merge function for the merge sort
+ * 
+ * @param a pointer to the left half of the array
+ * @param size1 size of the first half (left -> mid)
+ * @param b pointer to the right half of the array
+ * @param size2 size of the second half (mid -> right)
+ */
 void merge(int *a, int size1, int *b, int size2)
 {
     int *temp;
